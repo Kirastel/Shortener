@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-white border mb-4">
+  <div class="collapse navbar-collapse multi-collapse ms-1" id="el2" style="min-width: 10.625rem; flex-grow: 0;">
+    <ul class="navbar-nav ms-lg-2">
+      <li class="nav-item">
+        <a class="navigation-link text-nowrap" href="{% url 'user:logout' %}">Logout</a>
+      </li>
+      <li class="nav-item">
+        <a class="navigation-link text-nowrap"  href="{% url 'home' %}">Builder</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<table class="table caption-top">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Created at</th>
+      <th scope="col">Long url</th>
+      <th scope="col">Short url</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for url in urls %}
+    <tr>
+      <th scope="row">{{ url.id }}</th>
+      <td>{{ url.created }}</td>
+      <td><a  href="{{ url.long_url }}">{{ url.long_url }}</a></td>
+      <td><a href="{{ url.short_url }}">{{my_site_url}}{{ url.short_url }}</a></td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}

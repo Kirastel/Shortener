@@ -1,0 +1,24 @@
+/*Navigation links*/
+.navigation-link {
+    color: var(--light-black);
+    text-decoration: none;
+    padding: 0.5rem 0.25rem 0.3125rem 0.25rem;
+    margin: 0 0.25rem;
+    border-bottom: 0.1875rem solid white;
+}
+.navigation-link:hover {
+    color: var(--dark-gray);
+    border-bottom: 0.1875rem solid orange;
+}
+
+/*Bootstrap form-control class changes*/
+.form-control:focus {
+        border-color: var(--medium-green);
+        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+    } 
+
+
+
+
+
+
