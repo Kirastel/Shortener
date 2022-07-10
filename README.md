@@ -24,3 +24,4 @@ ____
 ```python manage.py runserver```
 
 8. From now local version is available at ```http://localhost:8000```
+____
